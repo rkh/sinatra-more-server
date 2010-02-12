@@ -8,7 +8,7 @@ module Sinatra
     def self.registered(klass)
       Rack::Handler.register "unicorn", "BigBand::MoreServer::Unicorn"
       Rack::Handler.register "rainbows", "BigBand::MoreServer::Rainbows"
-      klass.server += "rainbows", "unicorn"
+      klass.server += ["rainbows", "unicorn"]
     end
   end
   
