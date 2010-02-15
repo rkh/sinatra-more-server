@@ -14,7 +14,7 @@ module Sinatra
       ::Rack::Handler.register "ebb",      "::Rack::Handler::Ebb"
       ::Rack::Handler.autoload :Ebb,       "ebb"
       klass.server += ["ebb", "zbatery", "rainbows", "unicorn"]
-      klass.set :async_server, ["thin", "zbatery", "rainbows", "unicorn"]
+      klass.set :async_server, ["thin", "zbatery", "rainbows"]
     end
     
     def has_async_callback!

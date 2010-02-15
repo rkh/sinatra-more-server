@@ -58,5 +58,5 @@ that supports it:
     end
 
 As mentioned above, this will only have effect on running your script directly. However, in any other case,
-you will choose your server manually, anyway. (Hint: As far as I know, only thin- and unicorn-based implementations
+you will choose your server manually, anyway. (Hint: As far as I know, only thin- and rainbows!-based implementations
 support async.callback at the moment.)
