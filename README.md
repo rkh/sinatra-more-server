@@ -16,7 +16,7 @@ Out of the box, Sinatra supports:
 
 * [Webrick](http://www.ruby-doc.org/stdlib/libdoc/webrick/rdoc/)
 * [Thin](http://code.macournoyer.com/thin/)
-* [Mongrel](http://mongrel.rubyforge.org/).
+* [Mongrel](http://mongrel.rubyforge.org/)
 
 Currently, this extensions adds support for:
 
