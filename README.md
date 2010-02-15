@@ -13,11 +13,13 @@ Additional Servers
 ------------------
 
 Out of the box, Sinatra supports:
+
 * [Webrick](http://www.ruby-doc.org/stdlib/libdoc/webrick/rdoc/)
 * [Thin](http://code.macournoyer.com/thin/)
 * [Mongrel](http://mongrel.rubyforge.org/).
 
 Currently, this extensions adds support for:
+
 * [Unicorn](http://unicorn.bogomips.org/)
 * [Rainbows](http://rainbows.bogomips.org/)
 
