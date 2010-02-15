@@ -2,6 +2,7 @@ Sinatra::MoreServer
 =======================
 
 Adds support for more web servers to [Sinatra](http://sinatrarb.com)::Base#run!.
+(Read: The server used when running `ruby yourfile.rb`. This has no effect rackup and akin.)
 
 BigBand
 -------
@@ -22,6 +23,7 @@ Currently, this extensions adds support for:
 
 * [Unicorn](http://unicorn.bogomips.org/)
 * [Rainbows!](http://rainbows.bogomips.org/)
+* [Zbatery](http://zbatery.bogomip.org/)
 * [Ebb](http://ebb.rubyforge.org/)
 
 Usage
