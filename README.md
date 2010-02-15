@@ -1,8 +1,10 @@
 Sinatra::MoreServer
 ===================
 
-Adds support for more web servers to [Sinatra](http://sinatrarb.com)::Base#run!.
-(Read: The server used when running `ruby yourfile.rb`. This has no effect rackup and akin.)
+Adds support for more web servers to [Sinatra](http://sinatrarb.com)::Base#run!
+
+Also, adds a helper method to ensure the server used from #run! supports async.callback, so all the
+fancy comet implementations work.
 
 BigBand
 -------
