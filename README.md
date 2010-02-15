@@ -21,7 +21,7 @@ Out of the box, Sinatra supports:
 Currently, this extensions adds support for:
 
 * [Unicorn](http://unicorn.bogomips.org/)
-* [Rainbows](http://rainbows.bogomips.org/)
+* [Rainbows!](http://rainbows.bogomips.org/)
 
 Usage
 -----
