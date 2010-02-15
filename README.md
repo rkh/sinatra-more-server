@@ -22,6 +22,7 @@ Currently, this extensions adds support for:
 
 * [Unicorn](http://unicorn.bogomips.org/)
 * [Rainbows!](http://rainbows.bogomips.org/)
+* [Ebb](http://ebb.rubyforge.org/)
 
 Usage
 -----
