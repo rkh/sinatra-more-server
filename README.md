@@ -1,5 +1,5 @@
 Sinatra::MoreServer
-=======================
+===================
 
 Adds support for more web servers to [Sinatra](http://sinatrarb.com)::Base#run!.
 (Read: The server used when running `ruby yourfile.rb`. This has no effect rackup and akin.)
@@ -42,3 +42,21 @@ Or in your own subclass:
     class Foo < Sinatra::Base
       register Sinatra::MoreServer
     end
+
+Async only, please!
+-------------------
+
+You use `async.callback`? Maybe via a library like [async\_sinatra](http://github.com/raggi/async_sinatra)
+or [pusher](http://github.com/macournoyer/pusher)? Then you might want to make sure we only use a server
+that supports it:
+
+    require "sinatra"
+    require "sinatra/more_server"
+    
+    configure do
+      has_async_callback!
+    end
+
+As mentioned above, this will only have effect on running your script directly. However, in any other case,
+you will choose your server manually, anyway. (Hint: As far as I know, only thin- and unicorn-based implementations
+support async.callback at the moment.)

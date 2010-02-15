@@ -6,6 +6,7 @@ module Sinatra
     autoload :Unicorn,  "sinatra/more_server/unicorn"
     autoload :Rainbows, "sinatra/more_server/rainbows"
     autoload :Zbatery,  "sinatra/more_server/zbatery"
+
     def self.registered(klass)
       ::Rack::Handler.register "unicorn",  "::Sinatra::MoreServer::Unicorn"
       ::Rack::Handler.register "rainbows", "::Sinatra::MoreServer::Rainbows"
@@ -13,7 +14,13 @@ module Sinatra
       ::Rack::Handler.register "ebb",      "::Rack::Handler::Ebb"
       ::Rack::Handler.autoload :Ebb,       "ebb"
       klass.server += ["ebb", "zbatery", "rainbows", "unicorn"]
+      klass.set :async_server, ["thin", "zbatery", "rainbows", "unicorn"]
     end
+    
+    def has_async_callback!
+      set :server, async_server
+    end
+    
   end
   
   register MoreServer
