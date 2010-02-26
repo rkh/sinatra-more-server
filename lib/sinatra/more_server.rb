@@ -14,14 +14,19 @@ module Sinatra
       ::Rack::Handler.register "ebb",      "::Rack::Handler::Ebb"
       ::Rack::Handler.autoload :Ebb,       "ebb"
       klass.server += ["ebb", "zbatery", "rainbows", "unicorn"]
-      klass.set :async_server, ["thin", "zbatery", "rainbows"]
+      klass.set :async_server, ["thin", "ebb", "zbatery", "rainbows"]
     end
-    
+
     def has_async_callback!
+      @has_async_callback = true
       set :server, async_server
     end
-    
+
+    def has_async_callback?
+      !!@has_async_callback
+    end
+
   end
-  
+
   register MoreServer
 end
