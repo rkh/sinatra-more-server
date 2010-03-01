@@ -1,7 +1,7 @@
 require "sinatra/more_server/unicorn"
 require "rainbows"
 
-class Sinatra
+module Sinatra
   module MoreServer
     # Rack Handler to use Rainbows for Sinatra::Base.run!
     module Rainbows

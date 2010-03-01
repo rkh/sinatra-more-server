@@ -3,7 +3,7 @@ require "unicorn"
 require "rack/content_length"
 require "rack/chunked"
 
-class Sinatra
+module Sinatra
   module MoreServer
     # Rack Handler to use Unicorn for Sinatra::Base.run!
     module Unicorn
