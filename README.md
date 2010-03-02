@@ -12,6 +12,12 @@ BigBand
 Sinatra::MoreServer is part of the [BigBand](http://github.com/rkh/big_band) stack.
 Check it out if you are looking for other fancy Sinatra extensions.
 
+
+Installation
+------------
+
+    gem install sinatra-more-server --prerelease
+
 Additional Servers
 ------------------
 
