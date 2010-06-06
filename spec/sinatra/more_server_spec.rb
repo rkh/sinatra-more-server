@@ -2,6 +2,7 @@ require File.expand_path(__FILE__ + "/../../spec_helper.rb")
 
 describe Sinatra::MoreServer do
   before { app :MoreServer }
+  it_should_behave_like 'sinatra'
 
   describe "additional server" do
     it("should offer unicorn")   { app.server.should include("unicorn")  }
