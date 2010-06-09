@@ -16,7 +16,7 @@ Check it out if you are looking for other fancy Sinatra extensions.
 Installation
 ------------
 
-    gem install sinatra-more-server --prerelease
+    gem install sinatra-more-server
 
 Additional Servers
 ------------------
