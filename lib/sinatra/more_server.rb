@@ -8,10 +8,10 @@ module Sinatra
     autoload :Zbatery,  "sinatra/more_server/zbatery"
 
     def self.registered(klass)
-      ::Rack::Handler.register "unicorn",  "::Sinatra::MoreServer::Unicorn"
-      ::Rack::Handler.register "rainbows", "::Sinatra::MoreServer::Rainbows"
-      ::Rack::Handler.register "zbatery",  "::Sinatra::MoreServer::Zbatery"
-      ::Rack::Handler.register "ebb",      "::Rack::Handler::Ebb"
+      ::Rack::Handler.register "unicorn",  "Sinatra::MoreServer::Unicorn"
+      ::Rack::Handler.register "rainbows", "Sinatra::MoreServer::Rainbows"
+      ::Rack::Handler.register "zbatery",  "Sinatra::MoreServer::Zbatery"
+      ::Rack::Handler.register "ebb",      "Rack::Handler::Ebb"
       ::Rack::Handler.autoload :Ebb,       "ebb"
       klass.server += ["ebb", "zbatery", "rainbows", "unicorn"]
       klass.set :async_server, ["thin", "ebb", "zbatery", "rainbows"]
