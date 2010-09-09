@@ -68,3 +68,8 @@ that supports it:
 As mentioned above, this will only have effect on running your script directly. However, in any other case,
 you will choose your server manually, anyway. (Hint: As far as I know, only thin- and rainbows!-based implementations
 support async.callback at the moment.)
+
+Thanks
+------
+
+* Graham Hughes for fixing it to work with Rack >= 1.2
